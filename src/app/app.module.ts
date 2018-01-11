@@ -24,7 +24,7 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { Component } from '@angular/core/src/metadata/directives';
 import { LoginComponent } from './login/login.component';
-import { AuthService } from './auth.service';
+import { AuthService } from './shared/services/auth.service';
 import { AuthGuard } from './shared/services/auth-guard.service';
 import { UserService } from './shared/services/user.service';
 import { AdminAuthGuard } from './shared/services/admin-auth-guard.service';
