@@ -10,10 +10,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { CustomFormsModule } from 'ng2-validation';
 
 import { environment } from '../environments/environment';
-import { AdminAuthGuard } from './admin-auth-guard.service';
-import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
-import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
-import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { AdminAuthGuard } from './admin/services/admin-auth-guard.service';
+import { AdminOrdersComponent } from './admin/components/admin-orders/admin-orders.component';
+import { AdminProductsComponent } from './admin/components/admin-products/admin-products.component';
+import { ProductFormComponent } from './admin/components/product-form/product-form.component';
 import { AppComponent } from './shared/components/app.component';
 import { BsNavbarComponent } from './shared/components/bs-navbar/bs-navbar.component';
 import { CheckOutComponent } from './shared/components/check-out/check-out.component';
@@ -28,6 +28,7 @@ import { ShoppingCartSummaryComponent } from './shared/components/shopping-cart-
 import { ShoppingCartComponent } from './shared/components/shopping-cart/shopping-cart.component';
 import { AuthGuard } from './shared/services/auth-guard.service';
 import { SharedModule } from 'shared/shared.module';
+import { AdminModule } from 'app/admin/admin.module';
 
 
 
@@ -41,10 +42,9 @@ import { SharedModule } from 'shared/shared.module';
     CheckOutComponent,
     OrderSuccessComponent,
     MyOrdersComponent,
-    AdminProductsComponent,
-    AdminOrdersComponent,
+    
     LoginComponent,
-    ProductFormComponent,
+
     ProductFilterComponent,
     
     ShoppingCartSummaryComponent,
@@ -53,6 +53,7 @@ import { SharedModule } from 'shared/shared.module';
   imports: [
     BrowserModule,
     SharedModule,
+    AdminModule,
     FormsModule,
     CustomFormsModule,
     DataTableModule,
