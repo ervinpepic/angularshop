@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { OrderService } from '../order.service';
+import { OrderService } from '../shared/services/order.service';
 
 @Component({
   selector: 'app-my-orders',
